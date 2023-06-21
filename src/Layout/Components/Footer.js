@@ -1,3 +1,4 @@
+import { Facebook, Instagram, Twitter } from "@mui/icons-material";
 import React from "react";
 
 function Footer() {
@@ -11,32 +12,9 @@ function Footer() {
       }}
     >
       <div>
-        <a
-          href="https://facebook.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i
-            className="fab fa-facebook-square"
-            style={{ fontSize: "24px", marginRight: "10px" }}
-          ></i>
-        </a>
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-          <i
-            className="fab fa-twitter-square"
-            style={{ fontSize: "24px", marginRight: "10px" }}
-          ></i>
-        </a>
-        <a
-          href="https://instagram.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i
-            className="fab fa-instagram-square"
-            style={{ fontSize: "24px", marginRight: "10px" }}
-          ></i>
-        </a>
+        <Facebook href="https://facebook.com" />
+        <Twitter href="https://twitter.com" />
+        <Instagram href="https://instagram.com" />
       </div>
       <p style={{ margin: "5px 0" }}>COPYRIGHT © ALL RIGHTS RESERVED.</p>
     </div>

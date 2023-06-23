@@ -3,9 +3,11 @@ import Layout from "./Layout";
 
 function App() {
   return (
-    <Router>
-      <Layout />
-    </Router>
+    <div style={{ backgroundColor: '#a6c6ff' }}>
+      <Router>
+        <Layout />
+      </Router>
+    </div>
   );
 }
 

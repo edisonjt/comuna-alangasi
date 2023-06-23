@@ -1,24 +1,45 @@
-import { Facebook, Instagram, Twitter } from "@mui/icons-material";
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import { Box, IconButton, Link, Typography } from "@mui/material";
 import React from "react";
 
-function Footer() {
+const Footer = () => {
   return (
-    <div
-      style={{
-        backgroundColor: "#0488D6",
-        color: "white",
-        padding: "10px",
-        textAlign: "center",
-      }}
+    <Box
+      component="footer"
+      bgcolor="primary.main"
+      color="white"
+      py={2}
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      justifyContent="center"
+      textAlign="center"
     >
-      <div>
-        <Facebook href="https://facebook.com" />
-        <Twitter href="https://twitter.com" />
-        <Instagram href="https://instagram.com" />
-      </div>
-      <p style={{ margin: "5px 0" }}>COPYRIGHT © ALL RIGHTS RESERVED.</p>
-    </div>
+      <Box mb={2}>
+        <Link href="https://www.facebook.com" target="_blank" rel="noopener" color="inherit">
+          <IconButton>
+            <FacebookIcon />
+          </IconButton>
+        </Link>
+        <Link href="https://www.instagram.com" target="_blank" rel="noopener" color="inherit">
+          <IconButton>
+            <InstagramIcon />
+          </IconButton>
+        </Link>
+        <Link href="https://www.twitter.com" target="_blank" rel="noopener" color="inherit">
+          <IconButton>
+            <TwitterIcon />
+          </IconButton>
+        </Link>
+      </Box>
+      <Typography variant="body2" color="inherit">
+      Comuna del centro del pueblo de Alangasí 2023. Todos los derechos reservados.
+      </Typography>
+    </Box>
   );
-}
+};
+
 
 export default Footer;

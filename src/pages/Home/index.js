@@ -1,45 +1,44 @@
-import {
-  CollectionsOutlined,
-  EmailOutlined,
-  FactCheckOutlined,
-  VrpanoOutlined,
-} from "@mui/icons-material";
 import React from "react";
-import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import FullCalendar from "@fullcalendar/react";
-import dayGridPlugin from "@fullcalendar/daygrid";
+import { Box } from "@mui/system";
+import { Typography } from "@mui/material";
+import Carousel from "./components/Carousel";
+import Services from "./components/Services";
+import Calendar from "./components/Calendar";
+
+const sliderContent = [
+  {
+    id: "image01",
+    image: "alangasi1.jpg",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+  },
+  {
+    id: "image02",
+    image: "alangasi1.jpg",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+  },
+  {
+    id: "image03",
+    image: "alangasi1.jpg",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+  }
+]
+const icons = ['contacts', 'projects', 'vr', 'gallery'];
+
 
 const Home = () => {
   return (
-    <div>
-      <div
-        style={{
-          width: "100%",
-          textAlign: "center",
-          margin: "20px",
-          textTransform: "uppercase",
-          fontSize: "40px",
-        }}
+
+    <Box>
+      <Typography
+        variant="h4"
+        align="center"
+        textTransform={"uppercase"}
+        marginTop="20px"
       >
         Comuna del centro del pueblo de alangasí
-      </div>
-      <div>
-        <Carousel showArrows showThumbs={false}>
-          <div>
-            <img src="alangasi1.jpg" alt="Imagen 1" />
-            <p className="legend">Descripción 1</p>
-          </div>
-          <div>
-            <img src="alangasi1.jpg" alt="Imagen 2" />
-            <p className="legend">Descripción 2</p>
-          </div>
-          <div>
-            <img src="alangasi1.jpg" alt="Imagen 3" />
-            <p className="legend">Descripción 3</p>
-          </div>
-        </Carousel>
-      </div>
+      </Typography>
+      <Carousel content={sliderContent}/>
       <div
         style={{
           display: "flex",
@@ -47,117 +46,11 @@ const Home = () => {
           margin: "30px",
         }}
       >
-        <div style={{ width: "50%" }}>
-          <div
-            style={{
-              width: "100%",
-              textAlign: "center",
-              margin: "10px",
-              textTransform: "uppercase",
-              fontSize: "25px",
-            }}
-          >
-            Servicios
-          </div>
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              padding: "20px",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <div style={{ margin: "40px" }}>
-              <EmailOutlined sx={{ fontSize: "200px" }} />
-              <div
-                style={{
-                  width: "100%",
-                  textAlign: "center",
-                  margin: "10px",
-                  textTransform: "uppercase",
-                  fontSize: "15px",
-                }}
-              >
-                Contactos
-              </div>
-            </div>
-            <div style={{ margin: "40px" }}>
-              <FactCheckOutlined sx={{ fontSize: "200px" }} />
-              <div
-                style={{
-                  width: "100%",
-                  textAlign: "center",
-                  margin: "10px",
-                  textTransform: "uppercase",
-                  fontSize: "15px",
-                }}
-              >
-                Proyectos
-              </div>
-            </div>
+        <Services icons={icons} />  
+        <Calendar />
+      </div> 
 
-            <div style={{ margin: "40px" }}>
-              <VrpanoOutlined sx={{ fontSize: "200px" }} />
-              <div
-                style={{
-                  width: "100%",
-                  textAlign: "center",
-                  margin: "10px",
-                  textTransform: "uppercase",
-                  fontSize: "15px",
-                }}
-              >
-                Recorrido Virtual
-              </div>
-            </div>
-            <div style={{ margin: "40px" }}>
-              <CollectionsOutlined sx={{ fontSize: "200px" }} />
-              <div
-                style={{
-                  width: "100%",
-                  textAlign: "center",
-                  margin: "10px",
-                  textTransform: "uppercase",
-                  fontSize: "15px",
-                }}
-              >
-                Galeria
-              </div>
-            </div>
-          </div>
-          <div>
-            {/* Aquí puedes agregar el código para la sección adicional */}
-          </div>
-        </div>
-        <div style={{ width: "50%", padding: "20px" }}>
-          <div
-            style={{
-              width: "100%",
-              textAlign: "center",
-              margin: "10px",
-              textTransform: "uppercase",
-              fontSize: "25px",
-            }}
-          >
-            Calendario
-          </div>
-          <div>
-            <div>
-              <FullCalendar
-                plugins={[dayGridPlugin]}
-                initialView="dayGridMonth"
-                events={[
-                  { title: "Event 1", date: "2023-06-01" },
-                  { title: "Event 2", date: "2023-06-05" },
-                  { title: "Event 3", date: "2023-06-10" },
-                ]}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </Box>
   );
 };
 

@@ -8,7 +8,7 @@ const NavBar = () => {
       <Toolbar>
           <img src="logo/logoALangasi.png" alt="Logo" style={{ width: "100px" }} />
           <div style={{ marginLeft: 'auto' }}>
-            <Typography variant="h6" style={{ display: 'inline', marginRight: '40px' }}>
+            <Typography variant="h6" style={{ display: 'inline', marginRight: '40px'}}>
               <ButtonNavbar to="/" name={"Inicio"} />
             </Typography>
             <Typography variant="h6" style={{ display: 'inline', marginRight: '40px' }}>

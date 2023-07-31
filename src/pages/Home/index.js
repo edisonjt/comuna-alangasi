@@ -5,6 +5,7 @@ import { Typography } from "@mui/material";
 import Carousel from "./components/Carousel";
 import Services from "./components/Services";
 import Calendar from "./components/Calendar";
+import '../../fonts/JuliusSansOne-Regular.ttf'
 
 const sliderContent = [
   {
@@ -36,6 +37,7 @@ const Home = () => {
         align="center"
         textTransform={"uppercase"}
         marginTop="20px"
+        style={{ fontFamily: 'JuliusSansOne-Regular' }}
       >
         Comuna del centro del pueblo de alangasí
       </Typography>

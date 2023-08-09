@@ -11,7 +11,7 @@ SwiperCore.use([Navigation, Pagination]);
 
 
 const Carousel = ({ content }) => {
-  const [activeSlide, setActiveSlide] = useState(0);
+  const [ setActiveSlide] = useState(0);
 
   const handleSlideChange = (swiper) => {
     setActiveSlide(swiper.activeIndex);

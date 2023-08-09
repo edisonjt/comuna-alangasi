@@ -58,7 +58,6 @@ const Service = ({ icons }) => {
               IconComponent = (
                 <CollectionsOutlined
                   sx={{ fontSize: "200px", color: "#1976d2" }}
-                  href={"http://www.google.com.ec"}
                 />
               );
               IconDescription = "Galería";

@@ -3,7 +3,6 @@ import Layout from "./Layout";
 
 function App() {
   return (
-    // <div style={{ backgroundColor: '#a6c6ff' }}>
     <div
       style={{
         background:

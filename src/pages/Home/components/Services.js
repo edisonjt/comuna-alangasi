@@ -7,6 +7,8 @@ import {
   VrpanoOutlined,
 } from "@mui/icons-material";
 
+const styles = { fontSize: "200px", color: "#1976d2" }
+
 const Service = ({ icons }) => {
   return (
     <div style={{ width: "50%" }}>
@@ -19,7 +21,7 @@ const Service = ({ icons }) => {
           fontSize: "25px",
         }}
       >
-        <Typography variant="h5">Servicios</Typography>
+        <Typography variant="h5" >Servicios</Typography>
       </div>
       <div
         style={{
@@ -36,28 +38,28 @@ const Service = ({ icons }) => {
           switch (icon) {
             case "contacts":
               IconComponent = (
-                <EmailOutlined sx={{ fontSize: "200px", color: "#1976d2" }} />
+                <EmailOutlined sx={styles} />
               );
               IconDescription = "Contacto";
               break;
             case "projects":
               IconComponent = (
                 <FactCheckOutlined
-                  sx={{ fontSize: "200px", color: "#1976d2" }}
+                  sx={styles}
                 />
               );
               IconDescription = "Proyectos";
               break;
             case "vr":
               IconComponent = (
-                <VrpanoOutlined sx={{ fontSize: "200px", color: "#1976d2" }} />
+                <VrpanoOutlined sx={styles} />
               );
               IconDescription = "Recorrido Virtual";
               break;
             case "gallery":
               IconComponent = (
                 <CollectionsOutlined
-                  sx={{ fontSize: "200px", color: "#1976d2" }}
+                  sx={styles}
                 />
               );
               IconDescription = "Galería";
@@ -76,7 +78,7 @@ const Service = ({ icons }) => {
                   fontSize: "15px",
                 }}
               >
-                <Typography>{IconDescription}</Typography>
+                <Typography variant="h6" fontFamily="JuliusSansOne">{IconDescription}</Typography>
               </div>
             </div>
           ) : null;

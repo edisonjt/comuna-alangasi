@@ -72,7 +72,7 @@ const Contact = () => {
           </Grid>
         </Grid>
       </Box>
-      <Typography variant="h4">UBICACION</Typography>
+      <Typography variant="h4">UBICACIÓN</Typography>
       <Box m={5}>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63836.213814682706!2d-78.43153900000001!3d-0.30072725000000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d5bd785bf021cf%3A0x193e22ed2846177f!2sAlangasi!5e0!3m2!1ses!2sec!4v1687524178532!5m2!1ses!2sec"

@@ -35,7 +35,7 @@ const Home = () => {
         variant="h4"
         align="center"
         textTransform={"uppercase"}
-        marginTop="20px"
+        m={4}
       >
         Comuna del centro del pueblo de alangasí
       </Typography>

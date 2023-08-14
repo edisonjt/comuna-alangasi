@@ -3,9 +3,21 @@ import JuliusSansOne from '../fonts/JuliusSansOne-Regular.ttf';
 
 export const lighTheme = createTheme({
     typography: {
-        fontFamily: 'Arial', // Font por defecto para la mayoría de los elementos
+        fontFamily: 'Arial', 
+        h1: {
+            fontFamily: 'JuliusSansOne, Arial', 
+          },
+        h2: {
+            fontFamily: 'JuliusSansOne, Arial', 
+        },
+        h3: {
+            fontFamily: 'JuliusSansOne, Arial', 
+          },
         h4: {
-          fontFamily: 'JuliusSansOne, Arial', // Usar JuliusSansOne-Regular para h1
+            fontFamily: 'JuliusSansOne, Arial', 
+        },
+        h5: {
+            fontFamily: 'JuliusSansOne, Arial', 
         },
     },
     components: {

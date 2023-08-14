@@ -1,78 +1,35 @@
 import { Grid, Paper, Typography } from "@mui/material";
+import InformationCard from "./components/InformationCard";
+
+const loremIpsum = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
 
 const AboutUs = () => {
   return (
     <Grid
-      container
-      m={2}
+      m={5}
       spacing={2}
       sx={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        flexDirection: "column"
       }}
     >
-      <Typography
-        sx={{
-          backgroundImage: "url('alangasi1.jpg')",
-          width: "100%",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-        variant="h4"
-        m={5}
-        height={"100px"}
-      >
+      <Typography variant="h4" height="100px" >
         Quienes Somos
       </Typography>
-      <Grid item xs={12} sm={5}>
-        <Paper style={{ padding: 20 }}>
-          <Typography variant="h5" gutterBottom>
-            Historia
-          </Typography>
-          <Typography variant="body1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            ultricies orci non nunc placerat, vitae sodales lacus lobortis. Nam
-            dapibus velit id urna commodo rhoncus. Donec eleifend enim ut purus
-            efficitur malesuada. Suspendisse quis nisi tortor. In aliquet felis
-            velit, nec aliquam sem feugiat id. Mauris interdum, tortor id
-            interdum ultrices, lacus odio congue libero, sed eleifend mi lectus
-            id tellus.
-          </Typography>
-        </Paper>
-      </Grid>
-      <Grid item xs={12} sm={5}>
-        <img
-          src="alangasi1.jpg"
-          alt="Imagen 1"
-          style={{ width: "100%", height: "auto" }}
-        />
-      </Grid>
-      <Grid item xs={12} sm={5}>
-        <img
-          src="alangasi1.jpg"
-          alt="Imagen 2"
-          style={{ width: "100%", height: "auto" }}
-        />
-      </Grid>
-      <Grid item xs={12} sm={5}>
-        <Paper style={{ padding: 20 }}>
-          <Typography variant="h5" gutterBottom>
-            Nuestra Misión
-          </Typography>
-          <Typography variant="body1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            ultricies orci non nunc placerat, vitae sodales lacus lobortis. Nam
-            dapibus velit id urna commodo rhoncus. Donec eleifend enim ut purus
-            efficitur malesuada. Suspendisse quis nisi tortor. In aliquet felis
-            velit, nec aliquam sem feugiat id. Mauris interdum, tortor id
-            interdum ultrices, lacus odio congue libero, sed eleifend mi lectus
-            id tellus.
-          </Typography>
-        </Paper>
-      </Grid>
+      <InformationCard 
+        title={"Historia"} 
+        description={loremIpsum} 
+        image={"alangasi1.jpg"}
+      />
+      <InformationCard 
+        title={"Nuestra misión"} 
+        description={loremIpsum} 
+        image={"alangasi1.jpg"}
+        flexDirection={"row-reverse"}
+      />
+      
     </Grid>
   );
 };
